@@ -1,0 +1,96 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+}
+
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: #b30047;
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #b30047;
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 1s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.cover {
+    background: url('images/cover-bg.jpg') no-repeat center center/cover;
+    z-index: 1;
+}
+
+.story, .moments, .future, .final-message {
+    background-color: #fff;
+    transform: translateZ(50px);
+}
+
+.story h2, .moments h2, .future h2 {
+    color: #ff5c5c;
+}
+
+.content {
+    max-width: 800px;
+    padding: 30px;
+}
+
+.image-animated {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 1.5s ease, opacity 1.5s ease;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.heart {
+    font-size: 4rem;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.heart:hover {
+    transform: scale(1.2);
+}
+
+.heart-end {
+    font-size: 5rem;
+    color: #ff5c5c;
+}
+
+/* Scroll-based animation */
+.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
